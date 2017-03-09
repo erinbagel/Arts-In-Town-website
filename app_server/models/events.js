@@ -13,7 +13,7 @@ var locationSchema = new mongoose.Schema({
     },
     
     //[Number] looks like  [longitude, latitude]
-    location: {type: [Number], index: '2dsphere'}, 
+    coordinates: {type: [Number, Number], index: '2dsphere'}, 
     
 });
 

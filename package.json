@@ -15,7 +15,9 @@
     "debug": "~2.6.0",
     "express": "~4.14.1",
     "jade": "~1.11.0",
+    "mongoose": "^4.8.6",
     "morgan": "~1.7.0",
+    "readline": "0.0.x",
     "serve-favicon": "~2.3.2"
   }
 }

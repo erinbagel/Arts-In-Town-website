@@ -1,0 +1,62 @@
+[
+    { 
+        "name" : "LOCAL POETS READING", 
+        "date" : "March 25, 2017",
+        "cost" : "Free", 
+        "organizer" : "Band",
+        "venueName": "Cute Cafe",
+        "address": "125 High Street, Oakland, CA 94608" },
+    { 
+        "name" : "DJ Bluntz + Artists", 
+        "date" : "April 1, 2017",
+        "cost" : "$15", 
+        "venueName": "Skull Bar",
+        "address": "311 Broadway, Oakland, CA 94607" },
+    { 
+        "name" : "ODD BALL GALLERY EXPO", 
+        "date" : "March 31, 2017",
+        "cost" : "Donation", 
+        "organizer" : "Odd Ball Gallery",
+        "venueName": "Odd Ball Gallery",
+        "address": "2000 4th St, Berkeley, CA 94710" },
+    { 
+        "name" : "BEER AND GUITARS", 
+        "date" : "April 7, 2017",
+        "cost" : "Free", 
+        "organizer" : "Meetup",
+        "venueName": "The Public House",
+        "address": "3101 Shattuck Ave, Berkeley, CA 94705" },  
+    { 
+        "name" : "ALIENS LOVE MUSIC", 
+        "date" : "March 25, 2017",
+        "cost" : "$30", 
+        "venueName": "The Truth is Out There",
+        "address": "1621 Telegraph Ave, Oakland, CA 94620" },
+    { 
+        "name" : "A Musical", 
+        "date" : "April 21, 2017",
+        "cost" : "$15", 
+        "venueName": "Coyote Theater",
+        "address": "1807 Telegraph Ave, Oakland, CA 94612" },
+    { 
+        "name" : "Sun Hazzy + UR Arsons", 
+        "date" : "March 25, 2017",
+        "cost" : "Free", 
+        "organizer" : "Band",
+        "venueName": "The Old Parish",
+        "address": "579 18th St, Oakland, CA 94612" },
+    { 
+        "name" : "Jay Zee and the Lemons", 
+        "date" : "May 25, 2017",
+        "cost" : "Free", 
+        "organizer" : "Band",
+        "venueName": "The Old Parish",
+        "address": "579 18th St, Oakland, CA 94612" },
+    { 
+        "name" : "A One Lady Show", 
+        "date" : "May 10, 2017",
+        "cost" : "Donation", 
+        "venueName": "Top of the Hill",
+        "address": "1233 17th St, San Francisco, CA 94107" 
+    }
+]

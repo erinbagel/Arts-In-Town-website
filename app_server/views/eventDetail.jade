@@ -1,0 +1,430 @@
+
+doctype html
+html(lang='en')
+  head
+    // Theme Made By www.w3schools.com - No Copyright
+    title Bootstrap Theme The Band
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+
+    link(href='https://fonts.googleapis.com/css?family=Lato', rel='stylesheet', type='text/css')
+
+    link(href='https://fonts.googleapis.com/css?family=Montserrat', rel='stylesheet', type='text/css')
+
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+
+    //stylesheet css
+    style.
+      body {
+      font: 400 15px/1.8 Lato, sans-serif;
+      color: #777;
+      }
+      
+      h3, h4 {
+      margin: 10px 0 30px 0;
+      letter-spacing: 10px;
+      font-size: 20px;
+      color: #111;
+      }
+      
+      h6 {
+      margin: 10px 20px 0px 20px;
+      font-weight: bold;
+      font-size: 15px;
+      color: #111;
+      }
+      
+      .container {
+      padding: 80px 120px;
+      }
+      
+      
+      
+      .person {
+        border: 10px solid transparent;
+        margin-bottom: 25px;
+        width: 80%;
+        height: 80%;
+        opacity: 0.7;
+      }
+      
+      .person:hover {
+      border-color: #f1f1f1;
+      }
+      
+      .carousel-inner img {
+      -webkit-filter: grayscale(90%);
+      filter: grayscale(90%); /* make all photos black and white */
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      }
+      .carousel-caption h3 {
+      color: #fff !important;
+      }
+      @media (max-width: 600px) {
+      .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+      }
+      }
+      
+      .bg-1 {
+      background: #2d2d30;
+      color: #bdbdbd;
+      }
+      
+      .bg-1 h3 {
+      color: #fff;
+      }
+      
+      .bg-1 h3 {
+      color: #fff;
+      }
+      
+      .bg-1 p {
+        margin-right: 20px;
+        margin-left: 20px;
+        font-style: italic;
+        font-size: 13px;
+      }
+      .list-group-item:first-child {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+      }
+      .list-group-item:last-child {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+      }
+      .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+      }
+      .thumbnail p {
+      margin-top: 15px;
+      color: #555;
+      }
+      .btn {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #f1f1f1;
+      border-radius: 0;
+      transition: .2s;
+      
+      }
+      .btn:hover, .btn:focus {
+      border: 1px solid #333;
+      background-color: #fff;
+      color: #000;
+      }
+      .modal-header, h4, .close {
+      background-color: #333;
+      color: #fff !important;
+      text-align: center;
+      font-size: 30px;
+      }
+      .modal-header, .modal-body {
+      padding: 40px 50px;
+      }
+      .nav-tabs li a {
+      color: #777;
+      }
+      
+      .affix {
+        top: 100px;
+      }
+      
+      #affix-container {
+        //background-color: #e3e4e5;
+        padding: 40px 120px 0px;
+        width: 100%
+        
+      }
+      
+      #googleMap {
+        width: 100%;
+        height: 300px;
+      // -webkit-filter: grayscale(100%);
+      // filter: grayscale(100%);
+      }
+      
+      #map {
+        width: 100%;
+        height: 400px;
+      }
+      
+      .navbar {
+      font-family: Montserrat, sans-serif;
+      margin-bottom: 0;
+      background-color: #2d2d30;
+      border: 0;
+      font-size: 11px !important;
+      letter-spacing: 4px;
+      opacity: 0.9;
+      }
+      .navbar li a, .navbar .navbar-brand {
+      color: #d5d5d5 !important;
+      }
+      .navbar-nav li a:hover {
+      color: #fff !important;
+      }
+      .navbar-nav li.active a {
+      color: #fff !important;
+      background-color: #29292c !important;
+      }
+      .navbar-default .navbar-toggle {
+      border-color: transparent;
+      }
+      .open .dropdown-toggle {
+      color: #fff;
+      background-color: #555 !important;
+      }
+      .dropdown-menu li a {
+      color: #000 !important;
+      }
+      .dropdown-menu li a:hover {
+      background-color: red !important;
+      }
+      footer {
+      background-color: #2d2d30;
+      color: #f5f5f5;
+      padding: 32px;
+      }
+      footer a {
+      color: #f5f5f5;
+      }
+      footer a:hover {
+      color: #777;
+      text-decoration: none;
+      }
+      .form-control {
+      border-radius: 0;
+      }
+      textarea {
+      resize: none;
+      }
+      
+      
+      //css for search bar
+      .stylish-input-group .input-group-addon{
+      background: white !important; 
+      }
+      .stylish-input-group .form-control{
+      border-right:0;
+      box-shadow:0 0 0;
+      border-color:#ccc;
+      }
+      
+      .stylish-input-group button{
+      border:0;
+      background:transparent;
+      }
+      
+      #event-container {
+        border: 1px solid #333;
+        border-color: #f1f1f1;
+      }
+      
+      .intro-header {
+        height: 500px;
+        background-color: #777777;
+        background: no-repeat center center;
+        background-attachment: scroll;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-filter: grayscale(60%);
+        filter: grayscale(60%); /* make all photos black and white */
+        background-size: cover;
+        -o-background-size: cover;
+        margin-bottom: 0px;
+      }
+      
+      .intro-header .site-heading,
+      .intro-header .post-heading,
+      .intro-header .page-heading {
+        padding: 80px;
+        color: white;
+      }
+      
+      @media only screen and (min-width: 768px) {
+        .intro-header .site-heading,
+        .intro-header .post-heading,
+        .intro-header .page-heading {
+          padding: 100px 0;
+  
+        }
+        
+      }
+      .intro-header .site-heading,
+      .intro-header .page-heading {
+        text-align: center;
+      }
+      
+      .intro-header .site-heading h1,
+      .intro-header .page-heading h1 {
+        margin-top: 0;
+        font-size: 50px;
+      }
+      .intro-header .site-heading .subheading,
+      .intro-header .page-heading .subheading {
+        font-size: 24px;
+        line-height: 1.5;
+        display: block;
+        font-family: Lato, sans-serif;
+        font-weight: 300;
+        margin: 10px 0 0;
+      }
+      @media only screen and (min-width: 768px) {
+        .intro-header .site-heading h1,
+        .intro-header .page-heading h1 {
+          font-size: 80px;
+        }
+      }
+      .intro-header .post-heading h1 {
+        font-size: 200%;
+      }
+      .intro-header .post-heading .subheading,
+      .intro-header .post-heading .meta {
+        line-height: 1.1;
+        display: block;
+        
+      }
+      .intro-header .post-heading .subheading {
+        font-family: Lato, sans-serif;
+        font-size: 30px;
+        margin: 10px 0 30px;
+        font-weight: bold;
+      }
+      .intro-header .post-heading .meta {
+        font-family: Lato, sans-serif;
+        font-style: italic;
+        font-weight: 800;
+        font-size: 26px;
+      }
+      .intro-header .post-heading .meta a {
+        color: white;
+      }
+      @media only screen and (min-width: 768px) {
+        .intro-header .post-heading h1 {
+          font-size: 60px;
+        }
+        .intro-header .post-heading .subheading {
+          font-size: 28px;
+        }
+      }
+      
+      
+
+  body#myPage(data-spy='scroll', data-target='.navbar', data-offset='50')
+    nav.navbar.navbar-default.navbar-fixed-top
+      .container-fluid
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#myNavbar')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='/') Arts In Town
+        #myNavbar.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='/') HOME
+            li
+              a(href='/events/') FIND EVENTS
+            li
+              a(href='#forum') POST EVENT/FIND TICKETS
+            li
+              a(href='/contact/') CONTACT
+            li.dropdown
+              a.dropdown-toggle(data-toggle='dropdown', href='#')
+                | MORE
+                span.caret
+              ul.dropdown-menu
+                li
+                  a(href='#') SIGN IN
+                li
+                  a(href='#') REGISTER
+                li
+                  a(href='#') FAQ
+            li
+  
+    // Set your background image for this header on the line below.
+    //header.intro-header(style="background-image: url('../bootstrap/images/pexels-photo-bass-player.jpeg')")
+    header.intro-header(style="background-image: url('https://static.pexels.com/photos/2318/vintage-technology-keyboard-old-large.jpg')")
+      .container
+        .row
+          .col-lg-8.col-md-10
+            .post-heading
+              h1 LOCAL POETS READING
+              .col-md-4.col-lg-4
+                h2.subheading FRI MARCH 31
+              .col-md-4.col-lg-4
+                h2.subheading 9:00pm
+              .col-md-4.col-lg-4 
+                h2.subheading Free
+             
+    nav.col-sm-9
+    #affix-container
+      nav.col-sm-3
+        a.btn.btn-default(data-spy='affix', data-offset-top='480') Buy Tickets
+  // Container for Event Details
+  #band.container
+    .row
+      .col-sm-8.col-md-8.col-lg-9
+        h3 Description
+        p We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        p We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      .col-sm-1.col-md-1.col-lg-1
+      .col-sm-3.col-md-3.col-lg-2
+        h3 Address
+        p Cute Cafe
+        p 125 High Street
+        p Oakland, CA 94608
+    .row
+      .col-sm-6.col-md-6.col-lg-8
+        .panel.panel-primary.review-panel
+          .panel-heading
+            a.btn.btn-default.pull-right(href='/location/review/new') LEAVE A COMMENT
+            h2.panel-title COMMENTS
+          .panel-body.review-container
+            .row
+              .review
+                .well.well-sm.review-header
+                  span.rating
+                    span.glyphicon.glyphicon-star
+                    span.glyphicon.glyphicon-star
+                    span.glyphicon.glyphicon-star
+                    span.glyphicon.glyphicon-star
+                    span.glyphicon.glyphicon-star
+                  span.reviewAuthor Simon Holmes
+                  small.reviewTimestamp 16 July 2013
+                .col-xs-12
+                  p What a great place. I can't say enough good things about it.
+            .row
+              .review
+                .well.well-sm.review-header
+                  span.rating
+                    span.glyphicon.glyphicon-star
+                    span.glyphicon.glyphicon-star
+                    span.glyphicon.glyphicon-star
+                    span.glyphicon.glyphicon-star-empty
+                    span.glyphicon.glyphicon-star-empty
+                  span.reviewAuthor Charlie Chaplin
+                  small.reviewTimestamp 16 June 2013
+                .col-xs-12
+                  p It was okay. Coffee wasn't great, but the wifi was fast.
+      .col-sm-6.col-md-6.col-lg-4
+        #googleMap
+        script.
+          function myMap() {
+          var myCenter = new google.maps.LatLng(37.7971799,-122.2760126);
+          var mapProp = {center:myCenter, zoom:13, scrollwheel:false, draggable:true, mapTypeId:google.maps.MapTypeId.ROADMAP};
+          var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+          var marker = new google.maps.Marker({position:myCenter});
+          marker.setMap(map);
+          }
+        script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAjb9lV1fxJldBB2qhfi_KAZMHt5nDZzvM&callback=myMap')
+
+        

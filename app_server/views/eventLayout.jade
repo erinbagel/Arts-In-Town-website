@@ -220,7 +220,7 @@ html(lang='en')
             li
               a(href='/') HOME
             li
-              a(href='/events/') FIND EVENTS
+              a(href='/eventList/') FIND EVENTS
             li
               a(href='/post/') POST EVENT/FIND TICKETS
             li
@@ -267,7 +267,8 @@ html(lang='en')
             |   Cute Cafe
           p 125 High Street, Oakland, CA 94608
           .row.text-center
-            button.btn(data-toggle='modal', data-target='#myModal') Learn More
+            //button.btn(href='/eventDetail/') Learn More
+            a.btn.btn-info(href='/eventDetail', role='button') Learn More
       .col-sm-4
         .thumbnail
           img(src='https://static.pexels.com/photos/12764/pexels-photo-12764-large.jpeg', alt='New York', width='400', height='300')
@@ -361,4 +362,5 @@ html(lang='en')
   //             p.card-text
   //               | Some quick example text to build on the card title and make up the bulk of the card's content.
   //             a.btn.btn-primary(href='#') Go somewhere
+      
       

@@ -1,0 +1,513 @@
+<<<<<<< HEAD:app_client/other/userProfile.html
+
+  <div class="container">
+    <div class="row profile">
+      <div class="col-md-3">
+        <div class="profile-sidebar">
+          <!-- SIDEBAR USERPIC-->
+          <div class="profile-userpic" align='center'><i class="fa fa-user-circle fa-5x"></i>
+            <!-- img.img-responsive(src='http://keenthemes.com/preview/metronic/theme/assets/admin/pages/media/profile/profile_user.jpg', alt='')-->
+          </div>
+          <!-- END SIDEBAR USERPIC-->
+          <!-- SIDEBAR USER TITLE-->
+          <div class="profile-usertitle">
+            <div class="profile-usertitle-name"> {{ oneuserCon.users.firstName }} {{ oneuserCon.users.lastName }} </div>
+            <div class="profile-usertitle-username"> {{ oneuserCon.users.username }} </div>
+          </div>
+          <!-- END SIDEBAR BUTTONS-->
+          <!-- SIDEBAR MENU-->
+          <div class="profile-usermenu">
+            <ul class="nav">
+              <li class="active"><a href="#"><i class="glyphicon glyphicon-home"></i>Events</a></li>
+              <li><a href="#"><i class="glyphicon glyphicon-user"></i>Account Settings</a></li>
+              <li><a href="#" target="_blank"><i class="glyphicon glyphicon-flag"></i>Help</a></li>
+            </ul>
+          </div>
+          <!-- END MENU-->
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="profile-content">
+          <h3>Bookmarks</h3>
+          <p>  </p>
+        </div>
+      </div>
+    </div>
+  </div>
+=======
+doctype html
+html(lang='en')
+  head
+    title Login Form
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+
+    link(href='https://fonts.googleapis.com/css?family=Lato', rel='stylesheet', type='text/css')
+
+    link(href='https://fonts.googleapis.com/css?family=Montserrat', rel='stylesheet', type='text/css')
+    
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    
+    link(rel='stylesheet', href='../bootstrap/css/form-elements.css')
+    //link(rel='stylesheet', href='assets/css/style.css')
+    
+    // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+      script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+    
+  //CSS
+  style.
+    body {
+      font: 400 15px/1.8 Lato, sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+      color: #888;
+      line-height: 30px;
+      text-align: center;
+    }
+    
+    strong { font-weight: 500; }
+    
+    a, a:hover, a:focus {
+    	color: #de615e;
+    	text-decoration: none;
+        -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
+    }
+    
+    h1, h2 {
+    	margin-top: 10px;
+    	font-size: 38px;
+        font-weight: 100;
+        color: #555;
+        line-height: 50px;
+    }
+    
+    h3 {
+    	font-size: 22px;
+        font-weight: 300;
+        color: #555;
+        line-height: 30px;
+    }
+    
+    img { max-width: 100%; }
+    
+    ::-moz-selection { background: #de615e; color: #fff; text-shadow: none; }
+    ::selection { background: #de615e; color: #fff; text-shadow: none; }
+    
+    
+    .btn-link-1 {
+    	display: inline-block;
+    	height: 50px;
+    	margin: 5px;
+    	padding: 16px 20px 0 20px;
+    	background: #de615e;
+    	font-size: 16px;
+        font-weight: 300;
+        line-height: 16px;
+        color: #fff;
+        -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
+    }
+    .btn-link-1:hover, .btn-link-1:focus, .btn-link-1:active { outline: 0; opacity: 0.6; color: #fff; }
+    
+    .btn-link-1.btn-link-1-facebook { background: #4862a3; }
+    .btn-link-1.btn-link-1-twitter { background: #55acee; }
+    .btn-link-1.btn-link-1-google-plus { background: #dd4b39; }
+    
+    .btn-link-1 i {
+    	padding-right: 5px;
+    	vertical-align: middle;
+    	font-size: 20px;
+    	line-height: 20px;
+    }
+    
+    .btn-link-2 {
+    	display: inline-block;
+    	height: 50px;
+    	margin: 5px;
+    	padding: 15px 20px 0 20px;
+    	background: rgba(0, 0, 0, 0.3);
+    	border: 1px solid #fff;
+    	font-size: 16px;
+        font-weight: 300;
+        line-height: 16px;
+        color: #fff;
+        -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
+    }
+    .btn-link-2:hover, .btn-link-2:focus, 
+    .btn-link-2:active, .btn-link-2:active:focus { outline: 0; opacity: 0.6; background: rgba(0, 0, 0, 0.3); color: #fff; }
+    
+    .navbar {
+      font-family: Montserrat, sans-serif;
+      margin-bottom: 0;
+      background-color: #2d2d30;
+      border: 0;
+      font-size: 11px !important;
+      letter-spacing: 4px;
+      opacity: 0.9;
+    }
+    .navbar li a, .navbar .navbar-brand {
+      color: #d5d5d5 !important;
+    }
+    .navbar-nav li a:hover {
+      color: #fff !important;
+    }
+    .navbar-nav li.active a {
+      color: #fff !important;
+      background-color: #29292c !important;
+    }
+    .navbar-default .navbar-toggle {
+    border-color: transparent;
+    }
+    .open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+    }
+    .dropdown-menu li a {
+    color: #000 !important;
+    }
+    .dropdown-menu li a:hover {
+    background-color: red !important;
+    }
+    
+    footer {
+      background-color: #2d2d30;
+      color: #f5f5f5;
+      padding: 16px;
+    }
+    footer a {
+      color: #f5f5f5;
+    }
+    footer a:hover {
+      color: #777;
+      text-decoration: none;
+    }
+    .form-control {
+      border-radius: 0;
+    }
+    textarea {
+      resize: none;
+    }
+    
+    /***** Top content *****/
+    
+    .inner-bg {
+        padding: 100px 0 170px 0;
+    }
+    
+    .top-content .text {
+    	color: #fff;
+    }
+    
+    .top-content .text h1 { color: #fff; }
+    
+    .top-content .description {
+    	margin: 20px 0 10px 0;
+    }
+    
+    .top-content .description p { opacity: 0.8; }
+    
+    .top-content .description a {
+    	color: #fff;
+    }
+    .top-content .description a:hover, 
+    .top-content .description a:focus { border-bottom: 1px dotted #fff; }
+    
+    .form-box {
+    	margin-top: 35px;
+    }
+    
+    .form-top {
+    	overflow: hidden;
+    	padding: 0 25px 15px 25px;
+    	background: #444;
+    	background: rgba(0, 0, 0, 0.35);
+    	-moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; border-radius: 4px 4px 0 0;
+    	text-align: left;
+    }
+    
+    .form-top-left {
+    	float: left;
+    	width: 75%;
+    	padding-top: 25px;
+    }
+    
+    .form-top-left h3 { margin-top: 0; color: #fff; }
+    .form-top-left p { opacity: 0.8; color: #fff; }
+    
+    .form-top-right {
+    	float: left;
+    	width: 25%;
+    	padding-top: 5px;
+    	font-size: 66px;
+    	color: #fff;
+    	line-height: 100px;
+    	text-align: right;
+    	opacity: 0.3;
+    }
+    
+    .form-bottom {
+    	padding: 25px 25px 30px 25px;
+    	background: #444;
+    	background: rgba(0, 0, 0, 0.3);
+    	-moz-border-radius: 0 0 4px 4px; -webkit-border-radius: 0 0 4px 4px; border-radius: 0 0 4px 4px;
+    	text-align: left;
+    }
+    
+    .form-bottom form textarea {
+    	height: 100px;
+    }
+    
+    .form-bottom form button.btn {
+    	width: 100%;
+    }
+    
+    .form-bottom form .input-error {
+    	border-color: #de615e;
+    }
+    
+    .social-login {
+    	margin-top: 35px;
+    }
+    
+    .social-login h3 {
+    	color: #fff;
+    }
+    
+    .social-login-buttons {
+    	margin-top: 25px;
+    }
+    
+    
+    /***** Media queries *****/
+    
+    @media (min-width: 992px) and (max-width: 1199px) {}
+    
+    @media (min-width: 768px) and (max-width: 991px) {}
+    
+    @media (max-width: 767px) {
+    	
+    	.inner-bg { padding: 60px 0 110px 0; }
+    
+    }
+    
+    @media (max-width: 415px) {
+    	
+    	h1, h2 { font-size: 32px; }
+    
+    }
+    
+    /* Profile container */
+    .profile {
+      margin: 100px 0;
+      background-color: #fff;
+    }
+    
+    /* Profile sidebar */
+    .profile-sidebar {
+      padding: 20px 0 10px 0;
+      border-style: solid;
+    }
+    
+    .profile-userpic img {
+      float: none;
+      margin: 0 auto;
+      width: 50%;
+      height: 50%;
+      -webkit-border-radius: 50% !important;
+      -moz-border-radius: 50% !important;
+      border-radius: 50% !important;
+    }
+    
+    .profile-usertitle {
+      text-align: center;
+      margin-top: 20px;
+    }
+    
+    .profile-usertitle-name {
+      color: #5a7391;
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 7px;
+    }
+    
+    .profile-usertitle-job {
+      text-transform: uppercase;
+      color: #5b9bd1;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    
+    .profile-userbuttons {
+      text-align: center;
+      margin-top: 5px;
+    }
+    
+    .profile-userbuttons .btn {
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 0px 15px;
+      margin-right: 5px;
+    }
+    
+    .profile-userbuttons .btn:last-child {
+      margin-right: 0px;
+    }
+        
+    .profile-usermenu {
+      margin-top: 30px;
+    }
+    
+    .profile-usermenu ul li {
+      border-bottom: 1px solid #f0f4f7;
+    }
+    
+    .profile-usermenu ul li:last-child {
+      border-bottom: none;
+    }
+    
+    .profile-usermenu ul li a {
+      color: #93a3b5;
+      align: left;
+      font-size: 14px;
+      font-weight: 400;
+    }
+    
+    .profile-usermenu ul li a i {
+      margin-right: 8px;
+      font-size: 14px;
+    }
+    
+    .profile-usermenu ul li a:hover {
+      background-color: #f1f1f1;
+      color: #5b9bd1;
+    }
+    
+    .profile-usermenu ul li.active {
+      border-bottom: none;
+    }
+    
+    .profile-usermenu ul li.active a {
+      color: #5b9bd1;
+      background-color: #f6f9fb;
+      border-left: 2px solid #5b9bd1;
+      margin-left: -2px;
+    }
+    
+    /* Profile Content */
+    .profile-content {
+      padding: 20px;
+      background: #fff;
+      min-height: 460px;
+    }
+  
+  body#myPage(data-spy='scroll', data-target='.navbar', data-offset='50')
+    nav.navbar.navbar-default.navbar-fixed-top
+      .container-fluid
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#myNavbar')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='/') Arts In Town
+        #myNavbar.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='/') HOME
+            li
+              a(href='/eventList/') FIND EVENTS
+            li
+              a(href='/post/') POST EVENT/FIND TICKETS
+            li
+              a(href='/contact/') CONTACT
+            li.dropdown
+              a.dropdown-toggle(data-toggle='dropdown')
+                | MORE
+                span.caret
+              ul.dropdown-menu
+                li
+                  a(href='/login/') SIGN IN
+                li
+                  a(href='/register') REGISTER
+                li
+                  a(href='#') FAQ
+  
+  .container
+    .row.profile
+      .col-md-3
+        .profile-sidebar
+          // SIDEBAR USERPIC
+          .profile-userpic
+            i.fa.fa-user-circle.fa-5x
+            // img.img-responsive(src='http://keenthemes.com/preview/metronic/theme/assets/admin/pages/media/profile/profile_user.jpg', alt='')
+          // END SIDEBAR USERPIC
+          // SIDEBAR USER TITLE
+          .profile-usertitle
+            .profile-usertitle-name
+              | Lady Ada
+            .profile-usertitle-job
+              | Frontend Developer
+          // END SIDEBAR BUTTONS
+          // SIDEBAR MENU
+          .profile-usermenu
+            ul.nav
+              li.active
+                a(href='#')
+                  i.glyphicon.glyphicon-home
+                  | 							Events
+              li
+                a(href='#')
+                  i.glyphicon.glyphicon-user
+                  | 							Account Settings
+              li
+                a(href='#', target='_blank')
+                  i.glyphicon.glyphicon-flag
+                  | 							Help
+          // END MENU
+      .col-md-9
+        .profile-content
+          | Event data goes here...
+
+  footer.text-center
+    a.up-arrow(href='#myPage', data-toggle='tooltip', title='TO TOP')
+      span.glyphicon.glyphicon-chevron-up
+    br
+    p
+      small &copy; Arts in Town 2017
+      
+    // Javascript
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    
+    //if lt IE 10
+      script(src='assets/js/placeholder.js')
+script.
+  $(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip();
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+  // Make sure this.hash has a value before overriding default behavior
+  if (this.hash !== "") {
+  // Prevent default anchor click behavior
+  event.preventDefault();
+  // Store hash
+  var hash = this.hash;
+  // Using jQuery's animate() method to add smooth page scroll
+  // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+  $('html, body').animate({
+  scrollTop: $(hash).offset().top
+  }, 900, function(){
+  // Add hash (#) to URL when done scrolling (default click behavior)
+  window.location.hash = hash;
+  });
+  } // End if
+  });
+  })
+>>>>>>> 838c642991463400136b562c43e0a0ae5682c28b:app_server/views/userProfile.jade

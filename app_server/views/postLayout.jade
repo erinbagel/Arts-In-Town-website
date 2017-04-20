@@ -1,0 +1,204 @@
+doctype html
+html
+  head
+    title= title
+    
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    link(href='https://fonts.googleapis.com/css?family=Lato', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Montserrat', rel='stylesheet', type='text/css')
+
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')  
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+
+    //stylesheet css
+    style.
+      body {
+      font: 400 15px/1.8 Lato, sans-serif;
+      color: #777;
+      padding-top: 65px;
+      background: #2d2d30;
+      }
+      h3, h4 {
+      margin: 10px 0 30px 0;
+      letter-spacing: 10px;
+      font-size: 20px;
+      color: #111;
+      }
+      .bg-1 {
+      background: #2d2d30;
+      color: #bdbdbd;
+      }
+      .bg-1 h3 {color: #fff;}
+      .bg-1 p {font-style: italic;}
+      .list-group-item:first-child {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+      }
+      .navbar {
+      font-family: Montserrat, sans-serif;
+      margin-bottom: 0;
+      background-color: #2d2d30;
+      border: 0;
+      font-size: 11px !important;
+      letter-spacing: 4px;
+      opacity: 0.9;
+      }
+      .navbar li a, .navbar .navbar-brand {
+      color: #d5d5d5 !important;
+      }
+      .navbar-nav li a:hover {
+      color: #fff !important;
+      }
+      .navbar-nav li.active a {
+      color: #fff !important;
+      background-color: #29292c !important;
+      }
+      .navbar-default .navbar-toggle {
+      border-color: transparent;
+      }
+      .open .dropdown-toggle {
+      color: #fff;
+      background-color: #555 !important;
+      }
+      .dropdown-menu li a {
+      color: #000 !important;
+      }
+      .dropdown-menu li a:hover {
+      background-color: red !important;
+      }
+      footer {
+      background-color: #2d2d30;
+      color: #f5f5f5;
+      padding: 32px;
+      }
+      footer a {
+      color: #f5f5f5;
+      }
+      footer a:hover {
+      color: #777;
+      text-decoration: none;
+      }
+      .form-control {
+      border-radius: 0;
+      }
+      textarea {
+      resize: none;
+      }
+  // THE NAV BAR
+  body#forum(data-spy='scroll', data-target='.navbar', data-offset='50')
+   .nav.navbar.navbar-default.navbar-fixed-top
+      .container-fluid
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#myNavbar')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='/') Arts In Town
+        #myNavbar.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='/') HOME
+            li
+              a(href='/eventlist') FIND EVENTS
+            li
+              a(href='/post/') POST EVENT
+            li
+              a(href='/contact/') CONTACT
+            li.dropdown
+              a.dropdown-toggle(data-toggle='dropdown', href='#')
+                | MORE
+                span.caret
+              ul.dropdown-menu
+                li
+                  a(href='/login') SIGN IN
+                li
+                  a(href='/register') REGISTER
+                li
+                  a(href='#') FAQ
+            li      
+// HEADER -> START OF FORM
+#forum.bg-1
+  h3.text-center POST AN EVENT TO ARTS-IN-TOWN
+  p.text-center Let's get started!
+    .col-xs-12.col-md-12
+      form.form-horizontal
+          .form-group
+              label.col-md-3.control-label(for='name') Event name:
+              .col-xs-12.col-md-6
+                input#name.form-control(type='name', placeholder='Enter event name')
+          .form-group
+              label.col-md-3.control-label(for='cost') Cost:
+              .col-xs-12.col-md-3
+                input#name.form-control(type='cost', placeholder='Enter cost')
+          .form-group
+              label.col-md-3.control-label(for='organizer') Event Organizer:
+              .col-xs-12.col-md-3
+                input#organizer.form-control(type='organizer', placeholder='Enter event organizer')
+          .form-group
+              label.col-md-3.control-label(for='type') Event type:
+              .col-xs-12.col-md-3
+                select#type.form-control.input-sm(name='type')
+                  option Music
+                  option Art
+                  option Theater
+                  option Literature
+                  option Cultural
+           .form-group
+              label.col-md-3.control-label(for='location') Event Location:
+              .col-xs-12.col-md-3
+                input.form-control(type='location', placeholder='Location') 
+          .form-group
+              label.col-md-3.control-label(for='date') Event Date:
+              .col-xs-12.col-md-3
+                input.form-control(type='date', placeholder='Date') 
+          .form-group
+              label.col-md-3.control-label(for='time') Event Time:
+              .col-xs-12.col-md-3
+                input.form-control(type='time', placeholder='Time') 
+          .form-group
+              label.col-md-3.control-label(for='tags') Event Tags:
+              .col-xs-12.col-md-3
+                input.form-control(type='tags', placeholder='Tags') 
+          .form-group
+              label.col-sm-3.control-label(for='about') Event Detail:
+              .col-sm-6
+                textarea#about.form-control(name='about', rows='5')
+          .col-lg-12
+            .row
+              .col-xs-6
+              .col-xs-3
+                button.btn.btn-default.pull-right Add event
+              .col-xs-3
+    // Footer
+    footer.text-center
+      a.up-arrow(href='#forum', data-toggle='tooltip', title='TO TOP')
+        span.glyphicon.glyphicon-chevron-up
+      br
+      p
+        small &copy; Arts in Town 2017
+script.
+  $(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip();
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#forum']").on('click', function(event) {
+  // Make sure this.hash has a value before overriding default behavior
+  if (this.hash !== "") {
+  // Prevent default anchor click behavior
+  event.preventDefault();
+  // Store hash
+  var hash = this.hash;
+  // Using jQuery's animate() method to add smooth page scroll
+  // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+  $('html, body').animate({
+  scrollTop: $(hash).offset().top
+  }, 900, function(){
+  // Add hash (#) to URL when done scrolling (default click behavior)
+  window.location.hash = hash;
+  });
+  } // End if
+  });
+  })

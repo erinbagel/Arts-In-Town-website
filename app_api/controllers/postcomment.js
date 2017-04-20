@@ -106,7 +106,7 @@ module.exports.getComments = function(req, res) {
   Comments.collection
     .find()
     .toArray(function(err, docs) {
-      // error says ifn query failed
+      // error says if query failed
       // docs is the query result, an array
       console.log("Found comment", docs.length);
       res

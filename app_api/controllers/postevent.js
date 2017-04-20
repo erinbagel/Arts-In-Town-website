@@ -7,19 +7,14 @@ var sendJSONresponse = function(res, status, content) {
 };
 
 //CREATE NEW EVENT
-module.exports.eventsCreate = function(req, res) {
-  if (!req.params.body) {
-    sendJSONresponse(res, 404, {
-      "message": "Not found"
-    });
-    return;
-  }
-  console.log(req.body);
-  console.log("create event");
+module.exports.createOne = function(req, res) {
+  console.log("POST new faculty");
+  console.log('req params body' , req.params, req.body);
   Events.create({
     name: req.body.name,
     date: req.body.date,
     time: req.body.time,
+    type: req.body.type,
     cost: req.body.cost,
     organizer: req.body.organizer,
     details: req.body.details,
@@ -34,11 +29,12 @@ module.exports.eventsCreate = function(req, res) {
     }]
   }, function(err, location) {
     if (err) {
-      console.log(err);
+      
+      console.log("COULD NOT POST\n", err);
       sendJSONresponse(res, 400, err);
     }
     else {
-      console.log(location);
+      console.log("SUCCESSFUL WRITE\n", location);
       sendJSONresponse(res, 201, location);
     }
   });
@@ -55,7 +51,7 @@ module.exports.eventsUpdateOne = function(req, res) {
   console.log(req.params.eventid);
   Events
     .findById(req.params.eventid)
-    .select('name date time cost organizer details tags venueName address zipCode state city streetAddress coords commentAuthor commentContent commentTimestamp') 
+    .select('name date time cost organizer details tags venueName address zipCode state city streetAddress coords commentAuthor commentContent commentTimestamp')
     //'-' states that we don't want to retreive
     //from db.
     .exec(
@@ -65,13 +61,14 @@ module.exports.eventsUpdateOne = function(req, res) {
             "message:": "eventid not found"
           });
           return;
-        } else if (err) {
+        }
+        else if (err) {
           sendJSONresponse(res, 400, err);
           return;
         }
         if (req.body.name !== undefined) {
-           event.name = req.body.name;
-         }
+          event.name = req.body.name;
+        }
         if (req.body.date !== undefined) {
           event.date = req.body.date;
         }
@@ -83,7 +80,7 @@ module.exports.eventsUpdateOne = function(req, res) {
         }
         if (req.body.organizer !== undefined) {
           event.organizer = req.body.organizer;
-        } 
+        }
         if (req.body.details !== undefined) {
           event.details = req.body.details;
         }
@@ -95,26 +92,27 @@ module.exports.eventsUpdateOne = function(req, res) {
         if (req.body.venueName !== undefined) {
           console.log('in venueName if')
           console.log(req.body.venueName)
-          //not reassigning venueName in Postman
+            //not reassigning venueName in Postman
           event.venueName = req.body.venueName;
         }
         //not reassigning value in postman
         if (req.body.address !== undefined) {
-           event.address = req.body.address;
-         }
+          event.address = req.body.address;
+        }
         // if (req.body.coords !== undefined) {
         //   coords: [parseFloat(req.body.lng), parseFloat(req.body.lat)]
         // }
-     
+
         event.save(function(err, event) {
           if (err) {
             sendJSONresponse(res, 404, err);
-          } else {
+          }
+          else {
             sendJSONresponse(res, 200, event);
           }
         });
       }
-  );
+    );
 };
 
 //DELETE AN EVENT
@@ -164,13 +162,13 @@ module.exports.getEvents = function(req, res) {
 module.exports.getTags = function(req, res) {
   console.log('GET all tags');
   console.log(req.tags.query);
-  
+
   Events.collection
-  .find()
-  .toArray(function(err, docs) {
-    console.log("Found tag", docs.length);
-    res
-      .status(200)
-      .json(docs);
-  });
+    .find()
+    .toArray(function(err, docs) {
+      console.log("Found tag", docs.length);
+      res
+        .status(200)
+        .json(docs);
+    });
 };

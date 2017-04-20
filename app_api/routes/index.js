@@ -15,7 +15,7 @@ router.get('/events', ctrlEvent.eventsGetAll);
 router.get('/events/:venueName', ctrlEvent.eventGetOne);
 
 //post event CRUD routes
-router.post('/viewevent', postevent.eventsCreate);
+router.post('/viewevent', postevent.createOne);
 router.get('/viewevent', postevent.getEvents);
 router.put('/viewevent/:eventid', postevent.eventsUpdateOne);
 router.delete('/viewevent/:eventid', postevent.deleteEvent);
@@ -28,7 +28,7 @@ router.delete('/eventDetail/comments/:commentid', postComment.deleteComment);
 
 /*USER PROFILES db*/
 /*POST users db*/
-router.post('/users/createuser', ctrlUsers.userCreate);
+// router.post('/users/createuser', ctrlUsers.userCreate);
 /*GET users db*/
 router.get('/users', ctrlUsers.getUsers);
 /*GET one user*/
@@ -37,5 +37,10 @@ router.get('/users/:userid', ctrlUsers.getOneUser);
 router.put('/users/:userid', ctrlUsers.usersUpdateOne);
 /* DELETE user in db */
 router.delete('/users/:userid', ctrlUsers.deleteUser);
+
+// Authentication
+router.post('/register', ctrlUsers.register);
+router.post('/login', ctrlUsers.login);  
+
 
 module.exports = router;

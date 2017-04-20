@@ -1,0 +1,40 @@
+
+  <div class="container">
+    <div class="row profile">
+      <div class="col-md-3">
+        <div class="profile-sidebar">
+          <!-- SIDEBAR USERPIC-->
+          <div class="profile-userpic" align='center'><i class="fa fa-user-circle fa-5x"></i>
+            <!-- img.img-responsive(src='http://keenthemes.com/preview/metronic/theme/assets/admin/pages/media/profile/profile_user.jpg', alt='')-->
+          </div>
+          <!-- END SIDEBAR USERPIC-->
+          <!-- SIDEBAR USER TITLE-->
+          <div class="profile-usertitle">
+            <div class="profile-usertitle-name"> {{ oneuserCon.users.firstName }} {{ oneuserCon.users.lastName }} </div>
+            <div class="profile-usertitle-username"> {{ oneuserCon.users.username }} </div>
+          </div>
+          <!-- END SIDEBAR BUTTONS-->
+          <!-- SIDEBAR MENU-->
+          <div class="profile-usermenu">
+            <ul class="nav">
+              <li class="active"><a href="#"><i class="glyphicon glyphicon-calendar"></i>Events</a></li>
+              <li><a href="#"><i class="glyphicon glyphicon-bookmark"></i>Bookmarks</a></li>
+              <li><a href="#"><i class="glyphicon glyphicon-user"></i>Account Settings</a></li>
+              <li><a href="/"><i class="glyphicon glyphicon-log-out"></i>Log out</a></li>
+            </ul>
+          </div>
+          <!-- END MENU-->
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="profile-content">
+          <h3>Events</h3>
+          <ul>
+            <li ng-repeat="e in allevntCon.user">
+              <p> {{ oneuserCon.users.events}} </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>

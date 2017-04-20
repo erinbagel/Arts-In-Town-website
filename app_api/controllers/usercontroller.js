@@ -1,10 +1,71 @@
 var mongoose = require('mongoose');
 var User = mongoose.model('User');
 
+var bcrypt   = require('bcrypt-nodejs'); 
+var jwt      = require('jsonwebtoken');
+
 var sendJSONresponse = function(res, status, content) {
   res.status(status);
   res.json(content);
 };
+
+
+
+module.exports.register = function(req, res) {
+
+  var firstName = req.body.firstName;
+  var lastName = req.body.lastName;
+  var email = req.body.email;
+  var username = req.body.username;
+  var password = req.body.password;
+
+  User.create({
+    firstName: firstName,
+    lastName: lastName,
+    email: email,
+    username: username,
+    password: bcrypt.hashSync(password, bcrypt.genSaltSync(10))
+  }, function(err, user) {
+    if (err) {
+      console.log(err);
+      sendJSONresponse(res, 400, err);
+      // res.status(400).json(err);
+    } else {
+      console.log('user created', user);
+      sendJSONresponse(res, 201, user);
+      // res.status(201).json(user);
+    }
+  });
+};
+
+
+
+module.exports.login = function(req, res) {
+ 
+  var username = req.body.username;
+  var password = req.body.password;
+
+  User.findOne({
+    username: username
+  }).exec(function(err, user) {
+    if (err) {
+      console.log(err);
+      res.status(400).json(err);
+    } else {         // password is what user enters
+      if (bcrypt.compareSync(password, user.password)) {
+        console.log('User found', user);
+        // server generates token
+        var token = jwt.sign({ username: user.username }, 's3cr3t', { expiresIn: 3600 });
+        
+        // server sends token to user 
+        res.status(200).json({success: true, token: token, user: user});
+      } else {
+        res.status(401).json('Unauthorized');
+      }
+    }
+  });
+};
+
 
 //GET ALL USER PROFILES
 module.exports.getUsers = function(req, res) { 

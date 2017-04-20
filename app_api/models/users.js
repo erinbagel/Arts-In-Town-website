@@ -1,7 +1,5 @@
 var mongoose = require('mongoose');
 
-// nested schema,
-// declare before parent schema
 var createUserSchema = new mongoose.Schema({
 
     firstName: {
@@ -26,10 +24,13 @@ var createUserSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    
+    // hash: String,
+    // salt: String,
+    
     bookmarks: [String],
     events: [String]
 });
-
 
 // model name, schema name, collection name (optional)
 // collection name will be events by default 

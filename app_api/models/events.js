@@ -7,23 +7,17 @@ var locationSchema = new mongoose.Schema({
 
     streetAddress: { 
         type: String,
-        required: true
     },
     city: {
         type: String,
-        required: true
     },
     state: {
         type: String,
-        required: true
     },
     zipCode: {
         type: String,
-        required: true
     },
     
-    //[Number] looks like  [longitude, latitude]
-    coords: {type: [Number], index: '2dsphere'}, 
 });
 
 
@@ -45,6 +39,9 @@ var eventSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    type: {
+        type: String,
+    },
     organizer: String,
     details: { 
         type: String,
@@ -53,11 +50,6 @@ var eventSchema = new mongoose.Schema({
     tags: {
         type:[String],
         required: true
-    },
-    link: {
-        type: String,
-        required: true,
-        unique: true
     },
     
     // Add nested schema, reference as an array 
